@@ -1,0 +1,18 @@
+<section class="content-side">
+    <div *ngIf="publics.length == 0" class="container-progress">
+        <div class="wrapper-progress">
+          <div class="loader-progress"><div class="dot"></div></div>
+          <div class="loader-progress"><div class="dot"></div></div>
+          <div class="loader-progress"><div class="dot"></div></div>
+          <div class="loader-progress"><div class="dot"></div></div>
+          <div class="loader-progress"><div class="dot"></div></div>
+        </div>
+      </div>
+    <br />
+    <h1 class="title-header">Publicaciones</h1>
+    <div *ngIf="publics.length > 0" class="publish-container">
+        <div *ngFor="let c of publics;">
+          <app-publication [publication]="c"></app-publication>
+        </div>
+    </div>
+</section>

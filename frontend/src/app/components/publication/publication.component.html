@@ -1,0 +1,19 @@
+<div class="publish-box">
+    <div class="publish-header">
+      <img src="../../assets/images/avatar.png" alt="teacher"/>
+      <span class="person-name">Ing. Javier Gutierrez</span>  
+      <span class="date"> - {{publication.created | amLocale: 'es' | amTimeAgo}}</span>
+    </div>
+    <div class="publish-content">
+      <h3 class="publish-title">{{publication.title}}</h3>
+      <p class="publish-summary">{{publication.summary}}</p>
+    </div>
+    <div class="images-resources">
+      <img src="../../assets/images/deriva.png" class="res-img"/>
+      <img src="../../assets/images/foto.jpg" class="res-img"/>
+    </div>
+    <div class="publish-options">
+      <a id="like-btn">{{publication.likes.length}}<i class="fas fa-thumbs-up"></i></a>
+      <a id="comments-btn">{{publication.comments}} <i class="fas fa-comments"></i></a>
+    </div>
+  </div>

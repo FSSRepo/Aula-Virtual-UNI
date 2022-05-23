@@ -1,0 +1,33 @@
+<div class="parallax">
+  <div
+    class="parallax-image"
+    [ngStyle]="{ backgroundImage: parallaxImage }"
+  ></div>
+  <h1>Bienvenido</h1>
+  <p>
+    Hola Steward, es un gusto tenerte aqui, estamos orgullosos que formes parte
+    de nuestra comunidad educativa.
+  </p>
+  <div class="animated-text">
+    <div class="line">Las matematicas es</div>
+    <div class="line">el lenguaje que nos ayuda</div>
+    <div class="line">a comprender</div>
+    <div class="line">nuestro entorno y el universo.</div>
+  </div>
+</div>
+
+<div class="container">
+  <div>
+    <app-publications *ngIf="classe" [classe]="classe.id"></app-publications>
+  </div>
+  <app-side-content isClasse="true" [classe]="classe"></app-side-content>
+  <app-our-services></app-our-services>
+  <div class="only-text">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eos,
+      iste sint rem quo, ducimus minima dolore accusantium a soluta architecto
+      dicta vitae consectetur voluptas quaerat, voluptate provident nemo
+      doloremque.
+    </p>
+  </div>
+</div>

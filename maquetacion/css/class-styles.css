@@ -1,0 +1,269 @@
+.parallax {
+    margin-top: 100px;
+    min-height: 40vh;
+    position: relative;
+    transition: inherit;
+    width: 100vw;
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+     background: 80% 80% / cover;
+  }
+  
+  .parallax h1 {
+    text-transform: uppercase;
+    z-index: -1;
+    position: relative;
+    color: black;
+    font-size: 60px;
+    margin-top: 30px;
+  }
+  .parallax p {
+    z-index: -1;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    color: black;
+    font-size: 25px;
+  }
+  
+  .parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url("../images/mates.jpg");
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(1.2);
+    z-index: -1;
+    min-height: 70vh;
+  }
+.animated-text{
+    width:fit-content;
+    color: #000;
+    position: relative;
+    margin: 30px auto;
+    background: #0400ff42;
+    padding: 0 40px;
+    height: 60px;
+    overflow: hidden;
+  }
+  
+  .line{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    line-height: 60px;
+  }
+  
+  .line:first-child{
+    animation: anim 10s infinite;
+  }
+  @keyframes anim {
+    0%{
+      margin-top: 60px;
+    }
+    20%{
+      margin-top: 0px;
+    }
+    40%{
+      margin-top: -60px;
+    }
+    60%{
+      margin-top: -120px;
+    }
+    80%{
+      margin-top: -180px;
+    }
+    100%{
+      margin-top: -240px;
+    }
+  }
+  .class-profile{
+    margin: 0 auto;
+    width: 90%;
+  }
+  .service-box{
+    color:white;
+    transition: 0.7s all;
+  }
+  
+  .service-box:hover{
+    background: #0f0095a9;
+  }
+  .student-profile p{
+    text-align: left;
+  }
+  .services-section{
+    background-image: url("../images/img2.jpg");
+  }
+  .service-icon{
+    border: 3px solid #1100ff;
+    color: #3700ff;
+  }
+  .section-title{
+    color:white;
+  }
+  
+  .class-container{
+    width: 90%;
+    margin: 5px auto;
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    grid-gap: 8px 8px;
+  }
+  
+  .class-box{
+    width: 100%;
+    background: rgb(253, 253, 253);
+    border-radius: 10px;
+    border: 2px solid #3131313f;
+    height: 340px;
+    overflow: hidden;
+    transition: all 0.4s;
+  }
+  
+  .class-box:hover {
+    box-shadow: 8px 8px 10px grey;
+  }
+  
+  .class-ref-img{
+    width: 100%;
+    height: 120px;
+  }
+  
+  .class-title{
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: left;
+    width: 90%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(104, 104, 104);
+  }
+  
+  .cls-prog{
+    width:90%;
+    margin: 0 auto;
+  }
+  .cls-prog p{
+    font-size: 15px;
+  }
+
+  .publish-container{
+    width: 90%;
+    margin: 10px auto;
+  }
+  .publish-box{
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgb(173, 173, 173);
+    text-align: left;
+    transition: 0.7s all;
+    margin-bottom: 10px;
+  }
+  .publish-box:hover{
+    box-shadow: 5px 5px 5px rgb(56, 56, 56);
+  }
+
+  .publish-header{
+    height: 50px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .publish-header img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    float:left;
+    border-radius: 40px;
+  }
+  
+  .person-name{
+    font-size: 15px;
+    color:black;
+  }
+  .date{
+    font-size: 15px;
+    color:rgb(66, 66, 66);
+  }
+  .publish-title{
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  .publish-summary{
+    font-size: 18px;
+  }
+
+  .publish-options {
+    color:rgb(77, 77, 77);
+  }
+  .publish-options a{
+    font-size: 18px;
+    border-radius: 10%;
+    transition: 0.3s all;
+    padding: 5px;
+    padding-top: 8px;
+  }
+  .publish-options a:hover{
+    background: rgba(206, 206, 206, 0.603);
+  }
+
+  .publish-options i{
+    font-size: 30px;
+    margin-left: 5px;
+    margin-top: 15px;
+  }
+
+  .images-resources{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px 5px;
+  }
+  .image-res-full-width {
+    grid-template-columns: 100%;
+  }
+
+  .res-img{
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .assign-part{
+    font-size: 16px;
+    list-style: none;
+    text-align: left;
+  }
+
+  .assign-part a{
+    font-weight: 700;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    width: 100%;
+    overflow: hidden;
+    color: #000;
+    transition: 0.4s all;
+  }
+  
+  .assign-part a:hover{
+    color: rgb(39, 1, 255);
+  }
+
+  .assign-part span{
+    display: block;
+    margin-top: 5px;
+    color:#444;
+  }
+  
+  .assign-part li{
+    width: 90%;
+    border-bottom: 1px solid rgb(63, 63, 63);
+  }
+
+

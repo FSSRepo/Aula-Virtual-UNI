@@ -1,0 +1,53 @@
+.assign-part{
+    font-size: 16px;
+    list-style: none;
+    text-align: left;
+  }
+
+  .assign-part a{
+    font-weight: 700;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    width: 100%;
+    overflow: hidden;
+    color: #000;
+    transition: 0.4s all;
+  }
+  
+  .assign-part a:hover{
+    color: rgb(39, 1, 255);
+  }
+
+  .assign-part span{
+    display: block;
+    margin-top: 5px;
+    color:#444;
+  }
+  
+  .assign-part li{
+    width: 90%;
+    border-bottom: 1px solid rgb(63, 63, 63);
+  }
+
+  
+  .class-profile{
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  
+.student-profile{
+  margin: 0 auto;
+  width: 90%;
+}
+.student-profile img{
+  width:125px;
+  height: 125px;
+  border-radius: 80px;
+  margin: 10px 10px;
+}
+
+.student-profile p{
+  text-align: left;
+}

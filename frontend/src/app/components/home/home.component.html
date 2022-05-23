@@ -1,0 +1,54 @@
+<div class="parallax">
+  <h1>Bienvenido</h1>
+  <p>
+    Hola, estas en la mejor aula virtual, aqui aprenderas bastante, te ofrecemos
+    herramientas super utiles y eficases.
+  </p>
+  <div class="animated-text">
+    <div class="line">La educacion no</div>
+    <div class="line">cambia el mundo,</div>
+    <div class="line">cambia a las personas</div>
+    <div class="line">que cambiaran el mundo.</div>
+  </div>
+</div>
+<div class="container">
+  <section class="content-side">
+    <div class="login-content">
+      <div *ngIf="loginError" class="error-target">
+        <p>{{loginMessage}}</p>
+      </div>
+      <form #studentForm="ngForm" class="login-form middle">
+        <div class="login-choose" [ngClass]="{'login-this':loginStudent}" (click)="choose(true)" style="margin-right: 4px;"><i class="fas fa-user-graduate"></i><span>Estudiante</span></div>
+        <div class="login-choose" [ngClass]="{'login-this':!loginStudent}" (click)="choose(false)"><i class="fas fa-chalkboard-teacher"></i><span>Profesor</span></div>
+        <h2>Iniciar sesion</h2>
+        
+        <div class="field-box">
+          <input type="text" name="uns" #uns="ngModel" [(ngModel)]="username"/>
+          <span *ngIf="loginStudent" data-placeholder="# Carnet"></span>
+          <span *ngIf="!loginStudent" data-placeholder="Cedula"></span>
+        </div>
+        <div class="field-box">
+          <input type="password" name="pws" #pws="ngModel" [(ngModel)]="password"/>
+          <span data-placeholder="contraseña"></span>
+        </div>
+        <input
+          id="login"
+          type="submit"
+          class="login-btn"
+          value="Ingresar"
+          (click)="login()"
+        />
+      </form>
+    </div>
+  </section>
+  <app-side-content></app-side-content>
+  <app-our-services></app-our-services>
+  <div class="only-text">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eos,
+      iste sint rem quo, ducimus minima dolore accusantium a soluta architecto
+      dicta vitae consectetur voluptas quaerat, voluptate provident nemo
+      doloremque.
+    </p>
+  </div>
+</div>

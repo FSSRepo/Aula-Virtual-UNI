@@ -1,0 +1,205 @@
+
+.parallax {
+    margin-top: 100px;
+    min-height: 40vh;
+    position: relative;
+    transition: inherit;
+    width: 100vw;
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+     background: 80% 80% / cover;
+  }
+  
+  .parallax h1 {
+    text-transform: uppercase;
+    z-index: -1;
+    position: relative;
+    color: white;
+    font-size: 60px;
+    margin-top: 30px;
+  }
+  .parallax p {
+    
+    z-index: -1;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    font-size: 25px;
+  }
+  
+  .parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url("../../../assets/images/banner-student.jpg");
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(1.2);
+    z-index: -1;
+    min-height: 70vh;
+  }
+
+  
+.animated-text{
+  width:fit-content;
+  color: #fff;
+  position: relative;
+  margin: 30px auto;
+  background: #0400ff42;
+  padding: 0 40px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.line{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.line:first-child{
+  animation: anim 10s infinite;
+}
+@keyframes anim {
+  0%{
+    margin-top: 60px;
+  }
+  20%{
+    margin-top: 0px;
+  }
+  40%{
+    margin-top: -60px;
+  }
+  60%{
+    margin-top: -120px;
+  }
+  80%{
+    margin-top: -180px;
+  }
+  100%{
+    margin-top: -240px;
+  }
+}
+
+.service-icon{
+  border: 3px solid #1100ff;
+  color: #3700ff;
+}
+.section-title{
+  color:white;
+}
+
+.class-container{
+  width: 90%;
+  margin: 5px auto;
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  grid-gap: 8px 8px;
+}
+
+.class-box{
+  width: 100%;
+  background: rgb(253, 253, 253);
+  border-radius: 10px;
+  border: 2px solid #3131313f;
+  height: 340px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.class-box:hover {
+  box-shadow: 8px 8px 10px grey;
+}
+
+.class-ref-img{
+  width: 100%;
+  height: 120px;
+}
+
+.class-title{
+  font-size: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: left;
+  width: 90%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(104, 104, 104);
+}
+
+.cls-prog{
+  width:90%;
+  margin: 0 auto;
+}
+.cls-prog p{
+  font-size: 15px;
+}
+.hw-yes{
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  color:rgb(223, 0, 0);
+}
+
+.hw-no{
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  color: rgb(0, 143, 7);
+}
+
+.cls-team{
+  color:rgb(3, 0, 190);
+}
+
+.assigns-container {
+  width:90%;
+  margin: 0 auto;
+}
+
+.assigns-item {
+  text-align: left;
+  width: 100%;
+  padding: 8px 15px;
+  border-radius: 10px;
+  background: rgb(243, 243, 243);
+  border: 1px solid #ccc;
+  margin: 10px auto;
+}
+
+.asg-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.asg-date {
+  font-size: 18px;
+  color: rgb(58, 58, 58);
+  right: 0px;
+}
+
+.asg-cls {
+  font-size: 18px;
+  color: rgb(37, 33, 33);
+  display: inline-block;
+  margin: 2px;
+}
+
+.apart-team{
+  font-size: 20px;
+  color:rgb(3, 0, 190);
+  width:90%;
+  margin: 0 auto;
+  margin-top: 15px;
+  border-bottom: 2px solid #808080ef;
+  text-align: left;
+}
+.asg-no {
+  font-size: 18px;
+  color: rgb(37, 33, 33);
+}

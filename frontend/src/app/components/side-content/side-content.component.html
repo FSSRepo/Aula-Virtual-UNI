@@ -1,0 +1,103 @@
+<aside class="side-bar">
+  <div *ngIf="!student && !classe" class="container-progress">
+    <div class="wrapper-progress">
+      <div class="loader-progress"><div class="dot"></div></div>
+      <div class="loader-progress"><div class="dot"></div></div>
+      <div class="loader-progress"><div class="dot"></div></div>
+      <div class="loader-progress"><div class="dot"></div></div>
+      <div class="loader-progress"><div class="dot"></div></div>
+    </div>
+  </div>
+  <!--                STUDENT SIDE BAR         -->
+  <div *ngIf="isStudent && student" class="sidebar-item">
+    <h3 class="side-bar-title">Perfil de Estudiante</h3>
+    <div class="student-profile">
+      <img *ngIf="student.photo != null" src="{{url}}get-photo/{{student.photo}}" alt="foto" />
+      <img *ngIf="student.photo == null" src="src/assets/images/avatar.jpg" alt="foto" />
+      <p>Nombre y Apellidos: {{student.name}}</p>
+      <p class="cls-team">Grupo: {{student.group}}</p>
+      <p>Carrera: {{student.career}}</p>
+      <p>Habilidades: {{student.skill}}</p>
+      <p>Semestre de la carrera: {{student.semestre}}</p>
+      <p>Trabajo: {{student.work}}</p>
+      <p>Promedio actual: 50%</p>
+      <div class="progress-bar-border">
+        <div class="performance" [style.width.%]='50'></div>
+      </div>
+    </div>
+  </div>
+  <!--                PROFESOR SIDE BAR           -->
+  <div *ngIf="isTeacher || teacher" class="sidebar-item">
+    <h3 class="side-bar-title">Perfil</h3>
+    <div class="student-profile">
+      <img src="images/avatar.png" alt="foto" />
+      <p>Nombre y Apellidos: {{teacher.name}}</p>
+      <p class="cls-team">Grupos: {{teacher.getGroups()}}</p>
+      <p>Carrera: {{teacher.getCareers()}}</p>
+    </div>
+  </div>
+  <!--                CLASE SIDE BAR             -->
+  <div *ngIf='isClasse && classe' class="sidebar-item">
+    <h3 class="side-bar-title">Clase</h3>
+    <div class="class-profile">
+      <p>{{classe.name}}</p>
+      <p class="cls-team">Grupo: {{classe.group}}</p>
+      <p>Profesor: {{classe.teacher}}</p>
+      <p>Estado: No esta en curso.</p>
+      <p>Unidad en curso: {{classe.unit}}</p>
+      <p>Progreso: {{classe.progress}}%</p>
+      <div class="progress-bar-border" >
+        <div [style.width.%]='classe.progress'></div>
+      </div>
+    </div>
+  </div>
+  <!--              ASIGNACIONES BAR             -->
+  <div *ngIf="isClasse" class="sidebar-item">
+    <h3 class="side-bar-title">Asignaciones (1)</h3>
+      <p *ngIf='hasHomework'>No tienes actividades, ni tareas</p>
+      <ul *ngIf='!hasHomework' class="assign-part">
+        <li>
+          <a href="#">Derivadas parciales</a>
+          <span>Para el lunes</span>
+        </li>
+      </ul>
+  </div>
+  <!--            PROFESORES ONLINE       -->
+    <div *ngIf='!isClasse' class="sidebar-item">
+      <h3 class="side-bar-title">Profesores En Linea</h3>
+      <ul class="avail-teachers">
+        <li>
+          <img src="../../../assets/images/teacher.jpg" alt="teacher" />
+          <a href="#">Oscar Rivera Gomez</a>
+          <span class="avail-teachers-date">Hace 3 minutos</span>
+        </li>
+        <li>
+          <img src="../../../assets/images/teacher.jpg" alt="teacher" />
+          <a href="#">Juan carlos Fargas</a>
+          <span class="avail-teachers-date">Hace 3 minutos</span>
+        </li>
+        <li>
+          <img src="../../../assets/images/teacher.jpg" alt="teacher" />
+          <a href="#">Francisco Rivera Gomez</a>
+          <span class="avail-teachers-date on-line">En linea</span>
+        </li>
+      </ul>
+    </div>
+    <!--                BUSQUEDA SIDE BAR         -->
+    <div id="search-side" class="sidebar-item">
+      <h3 class="side-bar-title">Buscador</h3>
+      <p>Resuelve tus dudas</p>
+      <form>
+        <div class="field-box">
+          <input type="text" />
+          <span data-placeholder="buscar algo..."></span>
+        </div>
+        <input
+          class="button-search"
+          type="submit"
+          name="submit"
+          value="buscar"
+        />
+      </form>
+    </div>
+  </aside>

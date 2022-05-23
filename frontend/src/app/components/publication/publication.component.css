@@ -1,0 +1,77 @@
+.publish-box {
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgb(173, 173, 173);
+  text-align: left;
+  transition: 0.7s all;
+  margin-bottom: 10px;
+}
+.publish-box:hover {
+  box-shadow: 5px 5px 5px rgb(56, 56, 56);
+}
+
+.publish-header {
+  height: 50px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.publish-header img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  float: left;
+  border-radius: 40px;
+}
+
+.person-name {
+  font-size: 15px;
+  color: black;
+}
+.date {
+  font-size: 15px;
+  color: rgb(66, 66, 66);
+}
+
+.publish-title {
+  font-size: 24px;
+  margin-left: 10px;
+}
+.publish-summary {
+  font-size: 18px;
+}
+
+.publish-options {
+  color: rgb(77, 77, 77);
+}
+.publish-options a {
+  font-size: 18px;
+  border-radius: 10%;
+  transition: 0.3s all;
+  padding: 5px;
+  padding-top: 8px;
+}
+.publish-options a:hover {
+  background: rgba(206, 206, 206, 0.603);
+}
+
+.publish-options i {
+  font-size: 30px;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+.images-resources {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 5px 5px;
+}
+.image-res-full-width {
+  grid-template-columns: 100%;
+}
+
+.res-img {
+  border-radius: 10px;
+  width: 100%;
+}

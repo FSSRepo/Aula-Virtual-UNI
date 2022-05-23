@@ -1,0 +1,58 @@
+<div class="parallax">
+  <h1>Bienvenido</h1>
+  <p *ngIf="student">
+    Hola {{student.name}}, es un gusto tenerte aqui, estamos orgullosos que formes parte
+    de nuestra comunidad educativa.
+  </p>
+  <div class="animated-text">
+    <div class="line">La educacion es el arma</div>
+    <div class="line">mas poderosa que puedes</div>
+    <div class="line">utilizar para</div>
+    <div class="line">cambiar el mundo.</div>
+  </div>
+</div>
+<div class="container">
+  <section class="content-side">
+    <div>
+      <br />
+      <h1 class="title-header">Clases</h1>
+      <div class="class-container">
+        <div class="class-box" *ngFor="let c of classes;">
+          <img *ngIf="c.photo != null" class="class-ref-img" src="{{url}}get-photo/{{c.photo}}" alt="mates" />
+          <img *ngIf="c.photo == null" class="class-ref-img" src="../../../assets/images/vandalicos.jpeg" alt="mates" />
+          <p class="class-title"><a [routerLink]="['/class/' + c.id]">{{c.name}}</a></p>
+          <div class="cls-prog">
+            <p>Progreso: {{c.progress}}%</p>
+            <div class="progress-bar-border">
+              <div class="performance" [style.width.%]="c.progress"></div>
+            </div>
+          </div>
+          <span [ngClass]="{
+            'hw-no':!c.hasHW,
+            'hw-yes':c.hasHW}">{{ c.hasHW ? 'Hay tarea':'No hay tarea'}}</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <br />
+      <h1 class="title-header">Asignaciones</h1>
+      <div class="assigns-container">
+        <div class="assigns-item">
+          <p class="asg-title">Investigacion documental</p>
+          <p class="asg-cls">De: Redaccion tecnica</p>
+          <span class="asg-date">- Tiempo indefinido</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-side-content [isStudent]="true" [student]="student"></app-side-content>
+  <app-our-services></app-our-services>
+  <div class="only-text">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eos,
+      iste sint rem quo, ducimus minima dolore accusantium a soluta architecto
+      dicta vitae consectetur voluptas quaerat, voluptate provident nemo
+      doloremque.
+    </p>
+  </div>
+</div>
